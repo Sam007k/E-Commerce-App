@@ -5,11 +5,13 @@ import ProductList from "./pages/ProductList";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Cart from "./pages/Cart";
+import StripePayButton from './components/stripe/StripePayButton'
 
 function App() {
   return (
     <>
-      <Home />
+      {/* <Home /> */}
+      <StripePayButton/>
       {/* <ProductList/> */}
       {/* <Product/> */}
       {/* <Register/> */}
