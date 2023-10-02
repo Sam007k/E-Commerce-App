@@ -175,7 +175,7 @@ const Cart = () => {
 useEffect(()=>{
   const makeRequest = async () =>{
     try{
-      const res = await axios.post('https://wtl4yt-5001.csb.app/api/checkout/payment', {
+      const res = await userRequest.post("/checkout/payment", {
       tokenId: stripeToken.id,
       amount: 500,
       })

@@ -19,7 +19,11 @@ const Products = ({cat,filters,sort}) => {
   useEffect(()=>{
     const getProducts = async ()=> {
       try {
-        const res = await axios.get(cat ? `https://wtl4yt-5001.csb.app/api/products?category=${cat}`: 'https://wtl4yt-5001.csb.app/api/products')
+       const res = await axios.get(
+          cat
+            ? `http://localhost:5001/api/products?category=${cat}`
+            : "http://localhost:5001/api/products"
+        );
         setProducts(res.data)
       } catch (err) {
         // console.log(err)

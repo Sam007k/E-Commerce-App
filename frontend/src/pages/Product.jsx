@@ -135,9 +135,7 @@ const Product = () => {
   useEffect(() => {
     const getProduct = async () => {
       try {
-        const res = await axios.get(
-          "https://wtl4yt-5001.csb.app/api/products/find/" + id
-        );
+        const res = await publicRequest.get("/products/find/" + id);
         setProduct(res.data);
       } catch (err) {
         console.log("err");
@@ -156,9 +154,7 @@ const Product = () => {
 
   const handleClick = () => {
     // update Cart
-    dispatch(
-      addProduct({ ...product, quantity,color,size })
-    );
+    dispatch(addProduct({ ...product, quantity, color, size }));
   };
 
   return (

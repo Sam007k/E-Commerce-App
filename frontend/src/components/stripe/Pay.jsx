@@ -19,7 +19,7 @@ const Pay = () => {
     const makeRequest = async () => {
       try {
         const res = await axios.post(
-          "https://wtl4yt-5001.csb.app/api/checkout/payment",
+          "https://localhost:5001/api/checkout/payment",
           {
             tokenId: stripeToken.id,
             amount: 2000,
