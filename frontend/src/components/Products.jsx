@@ -3,6 +3,7 @@ import { popularProducts } from "../data";
 import Product from "./Product";
 import { useEffect,useState } from "react";
 import axios from 'axios'
+import { userRequest } from "../requestMethods";
 
 const Container = styled.div`
     padding: 20px;
