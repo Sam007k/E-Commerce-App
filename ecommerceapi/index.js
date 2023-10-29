@@ -20,7 +20,13 @@ console.log('DBConnection Successfull'))
     console.log(err)
 })
 
-app.use(cors())
+app.use(cors(
+    {
+        origin: ["https://e-commerce-app-frontend-henna.vercel.app"],
+        methods:["POST", "PUT", "PATCH","GET","DELETE"],
+        credentials: true
+    }
+))
 app.use(express.json())
 app.use('/api/auth', authRoute)
 app.use('/api/users', userRoute)
