@@ -20,7 +20,7 @@ const Products = ({cat,filters,sort}) => {
   useEffect(()=>{
     const getProducts = async ()=> {
       try {
-       const res = await userRequest.post(
+       const res = await userRequest.get(
           cat
             ? `/products?category=${cat}`
             : "/products"
