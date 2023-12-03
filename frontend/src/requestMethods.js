@@ -1,7 +1,10 @@
 import axios from "axios";
 
+import { config } from "./urlconstant";
+const URL = config.url;
+
 // const BASE_URL = `http://localhost:5001/api/`;
-const BASE_URL = `https://ecommerce-frontend-2761.onrender.com`;
+const BASE_URL = URL
 
 // const BASE_URL = `http://wtl4yt-5001.csb.app/api/`;
 

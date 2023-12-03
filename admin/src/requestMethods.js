@@ -1,8 +1,10 @@
 import axios from "axios";
 
+import { config } from "./urlconstant";
+const URL = config.url;
+
 // const BASE_URL = `http://localhost:5001/api/`;
-const BASE_URL = `https://e-commerce-app-api-gray.vercel.app/api/`;
-// const BASE_URL = `https://wtl4yt-5001.csb.app/api/`;
+const BASE_URL = URL;
 
 const TOKEN =
   JSON.parse(JSON.parse(localStorage.getItem("persist:root")).user).currentUser
