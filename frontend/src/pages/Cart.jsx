@@ -255,7 +255,7 @@ useEffect(()=>{
               <SummaryItemPrice>$ {cart.total}</SummaryItemPrice>
             </SummaryItem>
             <StripeCheckout
-              name="Lama Shop"
+              name="Serene Shop"
               image="https://avatars.githubusercontent.com/u/58684781?v=4"
               billingAddress
               shippingAddress

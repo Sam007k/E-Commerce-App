@@ -15,6 +15,7 @@ const Pay = () => {
     console.log("token", token);
     setStripeToken(token);
   };
+  
   useEffect(() => {
     const makeRequest = async () => {
       try {
@@ -43,7 +44,7 @@ const Pay = () => {
       }}
     >{stripeToken ? (<span>Processing, Please Wait...</span>) : 
       (<StripeCheckout
-        name="Lama Shop"
+        name="Serene Shop"
         image="https://avatars.githubusercontent.com/u/58684781?v=4"
         billingAddress
         shippingAddress

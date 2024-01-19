@@ -17,7 +17,7 @@ const Success =() =>{
         <Container>
         <img src='https://avatars.githubusercontent.com/u/58684781?v=4'/>
         <h3>Successfull</h3>
-        <p>Your order us being prepared.Thanks for choosing Lama Shop</p>
+        <p>Your order us being prepared.Thanks for choosing Serene Shop</p>
         </Container>
     )
     }

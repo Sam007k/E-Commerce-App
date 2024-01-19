@@ -2,8 +2,9 @@ import ArrowCircleLeftOutlinedIcon from "@mui/icons-material/ArrowCircleLeftOutl
 import ArrowCircleRightOutlinedIcon from "@mui/icons-material/ArrowCircleRightOutlined";
 import { useState } from "react";
 import styled from "styled-components";
-import {sliderItems} from '../data';
-import {mobile} from '../../src/responsive';
+import { sliderItems } from "../data";
+import { mobile } from "../../src/responsive";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   width: 100%;
@@ -80,36 +81,37 @@ const Button = styled.button`
   cursor: pointer;
 `;
 const Slider = () => {
-  const [slideIndex,setSlideIndex] = useState(0)
+  const [slideIndex, setSlideIndex] = useState(0);
   const handleClick = (direction) => {
-    if(direction === 'left'){
-      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2)
-    }else {
-      setSlideIndex(slideIndex < 2 ? slideIndex + 1: 0)
+    if (direction === "left") {
+      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
+    } else {
+      setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
     }
-  }
+  };
   return (
     <Container>
-      <Arrow direction="left" onClick={()=>handleClick('left')}>
+      <Arrow direction="left" onClick={() => handleClick("left")}>
         <ArrowCircleLeftOutlinedIcon />
       </Arrow>
       <Wrapper slideIndex={slideIndex}>
-        {sliderItems.map(item => (
-             <Slide bg={item.bg} key={item.id}>
-             <ImgContainer>
-               <Image src={item.img} />
-             </ImgContainer>
-             <InfoContainer>
-                 <Title>{item.title}</Title>
-                 <Desc>{item.desc}</Desc>
-                 <Button>SHOW NOW</Button>
-               </InfoContainer>
-           </Slide >
+        {sliderItems.map((item) => (
+          <Slide bg={item.bg} key={item.id}>
+            <ImgContainer>
+              <Image src={item.img} />
+            </ImgContainer>
+            <InfoContainer>
+              <Title>{item.title}</Title>
+              <Desc>{item.desc}</Desc>
+              <Button>
+                <Link style={{textDecoration:'none',color:'black'}} to="/products/women">SHOW NOW</Link>
+              </Button>
+            </InfoContainer>
+          </Slide>
         ))}
-        
       </Wrapper>
 
-      <Arrow direction="right" onClick={()=>handleClick('right')}>
+      <Arrow direction="right" onClick={() => handleClick("right")}>
         <ArrowCircleRightOutlinedIcon />
       </Arrow>
     </Container>

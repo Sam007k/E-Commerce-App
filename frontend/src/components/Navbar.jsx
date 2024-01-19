@@ -65,6 +65,7 @@ const MenuItem = styled.div`
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
+
 const Navbar = () => {
   const quantity = useSelector((state) => state.cart.quantity);
 
@@ -73,17 +74,17 @@ const Navbar = () => {
       <Wrapper>
         <Left>
           <Language>EN</Language>
-          <SearchContainer>
+          {/* <SearchContainer>
             <Input placeholder="search" />
             <SearchIcon style={{ color: "gray", fontSize: "16px" }} />
-          </SearchContainer>
+          </SearchContainer> */}
         </Left>
         <Center>
-          <Logo>LAMA</Logo>
+          <Logo>SERENE</Logo>
         </Center>
         <Right>
-          <MenuItem>Register</MenuItem>
-          <MenuItem><Link to='/login'>Sign In</Link></MenuItem>
+          <MenuItem><Link style={{textDecoration:'none'}} to='/register'>Register</Link></MenuItem>
+          <MenuItem><Link style={{textDecoration:'none'}} to='/login'>Sign In</Link></MenuItem>
 
           <Link to="/cart">
             <MenuItem>
